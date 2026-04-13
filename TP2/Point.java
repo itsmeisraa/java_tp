@@ -1,29 +1,21 @@
-public class Point {
-    int a;
-    int b;
-    // Default constructor
-    public Point() {
-        this.a = 0;
-        this.b = 0;
-    }
+class Point {
+    private int x;
+    private int y;
 
-    // Constructor with parameters
     public Point(int x, int y) {
-        this.a = x;
-        this.b = y;
+        this.x = x;
+        this.y = y;
     }
 
-    public void move(int dx, int dy) {
-        this.a += dx;
-        this.b += dy;
+    // The new Abstraction method
+    public double calculateDistanceTo(Point other) {
+        double xDiff = other.x - this.x;
+        double yDiff = other.y - this.y;
+
+        return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
     }
 
     public void display() {
-        System.out.println("Point(" + a + ", " + b + ")");
+        System.out.println("Point(" + x + ", " + y + ")");
     }
-	public void calculateDistance(Point(int c, int d);){
-		double D;
-		D = Math.sqrt(Math.pow(c - a, 2) + Math.pow(d - b, 2));
-		System.out.println("the Distance is "+ " "+ D );
-	}
 }
