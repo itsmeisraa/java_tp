@@ -21,7 +21,7 @@ public class exo1 {
         }
     }
 
-    //3. Copier le tableau
+    //  Copier le tableau
     public static void copierTableau(int[] original) {
         int[] copie = new int[original.length];
         System.arraycopy(original, 0, copie, 0, original.length);
